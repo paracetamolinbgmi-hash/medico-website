@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12345a">
+  <meta name="description" content="MEDICO — pharmacy and healthcare education, notes, articles, videos and learning tools.">
+  <title>MEDICO | Pharmacy & Healthcare Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="MEDICO home">
+      <span class="brand-mark">M<span>+</span></span>
+      <span class="brand-copy"><strong>MEDICO</strong><small>PHARMACY & HEALTHCARE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#home">Home</a>
+      <a href="#notes">Pharmacy Notes</a>
+      <a href="#diseases">Diseases</a>
+      <a href="#healthcare">Healthcare</a>
+      <a href="#articles">Articles</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Search">⌕</button>
+      <a class="tools-button" href="#tools"><span class="tool-symbol">▦</span> Tools</a>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="container search-inner">
+      <input id="siteSearch" type="search" placeholder="Search notes, diseases, articles and tools..." aria-label="Search website">
+      <button class="primary-button" id="searchGo">Search</button>
+      <button class="close-search" id="searchClose" aria-label="Close search">×</button>
+    </div>
+    <div class="container" id="searchResults" aria-live="polite"></div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-grid container">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> LEARN • UNDERSTAND • GROW</div>
+      <h1>Healthcare knowledge.<br><em>Made clear.</em></h1>
+      <p class="hero-lead">A practical learning platform for pharmacy students, healthcare professionals and curious minds.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#notes">Explore Pharmacy Notes <span>→</span></a>
+        <a class="text-button" href="#tools">Explore free tools <span>↗</span></a>
+      </div>
+      <div class="hero-proof"><span class="proof-icon">✓</span> Clear explanations <span class="proof-sep">•</span> Student-friendly <span class="proof-sep">•</span> Free to explore</div>
+    </div>
+    <div class="hero-art" aria-label="Healthcare learning illustration">
+      <div class="art-glow"></div>
+      <div class="art-card art-card-top"><span class="art-mini-icon">✚</span><div><b>Learn with clarity</b><small>Concepts made simple</small></div></div>
+      <div class="medical-orbit orbit-one"></div><div class="medical-orbit orbit-two"></div>
+      <div class="medical-cross">+</div>
+      <div class="book-stack"><div class="book book-back"></div><div class="book book-mid"></div><div class="book book-front"><span>MEDICO</span><small>LEARNING GUIDE</small><i>✚</i></div></div>
+      <div class="art-card art-card-bottom"><span class="pulse-line">⌁</span><div><b>Knowledge for everyone</b><small>Pharmacy • Health • Science</small></div></div>
+      <span class="floating-pill pill-a"></span><span class="floating-pill pill-b"></span>
+    </div>
+  </div>
+  <div class="hero-bottom container"><span>YOUR LEARNING SPACE</span><span class="hero-line"></span><span>PHARMACY & HEALTHCARE EDUCATION</span></div>
+</section>
+
+<section class="trust-strip">
+  <div class="container trust-items"><span>Built for learners</span><span>Evidence-aware content</span><span>Useful learning tools</span><span>English + Hindi direction</span></div>
+</section>
+
+
+<section class="section container" id="notes">
+  <div class="section-heading"><div><span class="kicker">STUDY SMARTER</span><h2>Pharmacy Notes</h2><p>Choose your programme, year or semester to explore subjects and study resources.</p></div></div>
+  <div class="programme-tabs" role="tablist" aria-label="Pharmacy programme">
+    <button class="programme-tab active" data-programme="dpharm">D.Pharm</button>
+    <button class="programme-tab" data-programme="bpharm">B.Pharm</button>
+  </div>
+  <div id="bpharmVersion" class="version-panel" hidden>
+    <span class="version-label">Select your B.Pharm syllabus</span>
+    <div class="version-tabs" role="group" aria-label="B.Pharm syllabus version">
+      <button class="version-tab active" data-version="legacy">PCI 2016–17</button>
+      <button class="version-tab" data-version="nep2026">PCI NEP 2026–27</button>
+    </div>
+    <p class="version-help" id="versionHelp">For batches following the PCI 2016–17 scheme. Check your university's applicable syllabus.</p>
+  </div>
+  <div id="programmeContent" class="programme-content" aria-live="polite"></div>
+  <p class="content-note">Subject lists are syllabus navigation guides. The applicable syllabus can depend on admission year and university. Select a subject to open its learning page; detailed notes and PDFs will be added after syllabus verification.</p>
+  <p class="official-syllabus-links"><a href="https://pci.gov.in/en/course-wise-regulations/?page=1" target="_blank" rel="noopener">PCI older B.Pharm syllabus (2016–17) ↗</a><a href="https://pci.gov.in/en/syllabus-bachelor-of-pharmacy-b-pharm-2026-as-per-nep-2020/" target="_blank" rel="noopener">PCI B.Pharm syllabus (2026, NEP 2020) ↗</a></p>
+  <div class="subject-dialog" id="subjectDialog" aria-hidden="true">
+    <div class="subject-dialog-backdrop" data-close-subject></div>
+    <section class="subject-dialog-card" role="dialog" aria-modal="true" aria-labelledby="subjectDialogTitle">
+      <button class="subject-dialog-close" type="button" data-close-subject aria-label="Close">×</button>
+      <span class="kicker">PHARMACY NOTES</span>
+      <h3 id="subjectDialogTitle">Subject</h3>
+      <p id="subjectDialogMeta" class="subject-dialog-meta"></p>
+      <div class="subject-resource-tabs">
+        <button class="resource-tab active" data-resource="overview">Overview</button>
+        <button class="resource-tab" data-resource="units">Units</button>
+        <button class="resource-tab" data-resource="questions">Important questions</button>
+        <button class="resource-tab" data-resource="practical">Practical</button>
+      </div>
+      <div id="subjectResourceContent" class="subject-resource-content"></div>
+      <p class="content-note">Learning material is being prepared. Syllabus-specific notes will be published after source and university verification.</p>
+    </section>
+  </div>
+</section>
+
+<section class="section soft-section" id="diseases">
+  <div class="container">
+    <div class="section-heading"><div><span class="kicker">UNDERSTAND HEALTH</span><h2>Disease Library</h2><p>Clear introductions to conditions, symptoms, risk factors, diagnosis and treatment concepts.</p></div><a class="view-link" href="#contact">Browse library <span>→</span></a></div>
+    <div class="feature-grid">
+      <article class="feature-card"><div class="feature-visual visual-heart"><span>♡</span><small>HEART & CIRCULATION</small></div><div class="feature-body"><span class="tag">DISEASE GUIDE</span><h3>Cardiovascular health</h3><p>Learn the basics of blood pressure, heart function and common cardiovascular conditions.</p><a href="#contact">Explore topic →</a></div></article>
+      <article class="feature-card"><div class="feature-visual visual-lungs"><span>⌁</span><small>RESPIRATORY HEALTH</small></div><div class="feature-body"><span class="tag">DISEASE GUIDE</span><h3>Respiratory conditions</h3><p>Understand common breathing disorders and the science behind respiratory health.</p><a href="#contact">Explore topic →</a></div></article>
+      <article class="feature-card"><div class="feature-visual visual-metabolic"><span>◉</span><small>METABOLIC HEALTH</small></div><div class="feature-body"><span class="tag">DISEASE GUIDE</span><h3>Diabetes & metabolism</h3><p>Explore glucose regulation, diabetes types and related health concepts.</p><a href="#contact">Explore topic →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section container" id="healthcare">
+  <div class="section-heading"><div><span class="kicker">EVERYDAY WELLNESS</span><h2>Healthcare, explained</h2><p>Reliable health education designed to make important topics easier to understand.</p></div></div>
+  <div class="health-grid">
+    <article class="health-card"><span class="health-number">01</span><div><h3>Medicine awareness</h3><p>Understand medicine labels, dosage forms, storage and safe-use principles.</p></div><span class="health-icon">▤</span></article>
+    <article class="health-card"><span class="health-number">02</span><div><h3>Preventive health</h3><p>Learn about screening, vaccination, hygiene and healthy daily habits.</p></div><span class="health-icon">＋</span></article>
+    <article class="health-card"><span class="health-number">03</span><div><h3>Health literacy</h3><p>Build confidence in understanding health information and asking better questions.</p></div><span class="health-icon">◎</span></article>
+  </div>
+</section>
+
+<section class="section soft-section" id="tools">
+  <div class="container">
+    <div class="section-heading"><div><span class="kicker">PRACTICAL LEARNING</span><h2>Popular Tools</h2><p>Simple calculators for learning and practice. No account required.</p></div><span class="free-badge">FREE TO USE</span></div>
+    <div class="tools-grid">
+      <article class="tool-card"><div class="tool-card-top"><span class="tool-icon">⌁</span><span class="tool-type">HEALTH</span></div><h3>BMI Calculator</h3><p>Calculate body mass index from height and weight.</p><button class="tool-open" data-tool="bmi">Open calculator <span>→</span></button></article>
+      <article class="tool-card"><div class="tool-card-top"><span class="tool-icon">⇄</span><span class="tool-type">CONVERSION</span></div><h3>Unit Converter</h3><p>Convert common metric and pharmaceutical units.</p><button class="tool-open" data-tool="convert">Open converter <span>→</span></button></article>
+      <article class="tool-card"><div class="tool-card-top"><span class="tool-icon">⚖</span><span class="tool-type">PHARMACY MATH</span></div><h3>Dose Calculator Practice</h3><p>Practice weight-based dose arithmetic with new questions each time.</p><button class="tool-open" data-tool="mgkg">Start practice <span>→</span></button></article>
+      <article class="tool-card"><div class="tool-card-top"><span class="tool-icon">◉</span><span class="tool-type">PHARMACY MATH</span></div><h3>Dilution Calculator</h3><p>Practice the dilution equation C₁V₁ = C₂V₂.</p><button class="tool-open" data-tool="dilution">Open calculator <span>→</span></button></article>
+    </div>
+    <p class="tool-safety">Educational use only. These tools do not provide prescriptions, diagnosis or patient-specific treatment advice. Verify calculations independently and consult a qualified professional for clinical decisions.</p>
+  </div>
+</section>
+
+<section class="section container" id="articles">
+  <div class="section-heading"><div><span class="kicker">READ & DISCOVER</span><h2>Latest Articles</h2><p>Thoughtful explainers, pharmacy career insights and healthcare learning resources.</p></div><a class="view-link" href="#contact">All articles <span>→</span></a></div>
+  <div class="article-grid">
+    <article class="article-card"><div class="article-art art-career"><span>CAREER</span><b>01</b></div><div class="article-content"><span class="article-meta">PHARMACY CAREERS · 6 MIN READ</span><h3>Exploring career pathways after B.Pharm</h3><p>A starting point for understanding roles across the pharmacy and healthcare industry.</p><a href="#contact">Read article →</a></div></article>
+    <article class="article-card"><div class="article-art art-science"><span>SCIENCE</span><b>02</b></div><div class="article-content"><span class="article-meta">PHARMACY BASICS · 5 MIN READ</span><h3>How medicines work in the body</h3><p>An introductory look at drug targets and the principles of pharmacology.</p><a href="#contact">Read article →</a></div></article>
+    <article class="article-card"><div class="article-art art-learning"><span>LEARNING</span><b>03</b></div><div class="article-content"><span class="article-meta">STUDY SKILLS · 4 MIN READ</span><h3>Build a consistent study routine</h3><p>Practical ideas to organise learning and make difficult concepts manageable.</p><a href="#contact">Read article →</a></div></article>
+  </div>
+</section>
+
+<section class="video-section" id="videos"><div class="container video-wrap"><div><span class="kicker light-kicker">WATCH & LEARN</span><h2>Learn visually.<br><em>Remember better.</em></h2><p>Video lessons and explainers that bring pharmacy and healthcare concepts to life.</p><a class="light-button" href="#contact">Video library coming soon <span>→</span></a></div><div class="video-placeholder"><div class="play-button">▶</div><span>MEDICO VIDEO LIBRARY</span><small>Educational videos • Explainers • Career guides</small></div></div></section>
+
+<section class="section container about-section" id="about"><div class="about-mark">M<span>+</span></div><div><span class="kicker">ABOUT MEDICO</span><h2>Knowledge should be<br>clear and accessible.</h2><p>MEDICO is being built as a practical pharmacy and healthcare education platform. Our aim is to make complex topics easier to understand through structured notes, useful tools, articles and videos.</p><a class="text-button" href="#contact">Get in touch <span>→</span></a></div><div class="about-stat"><strong>01</strong><span>One learning space<br>for pharmacy & health</span></div></section>
+
+<section class="contact-section" id="contact"><div class="container contact-wrap"><div><span class="kicker light-kicker">LET'S CONNECT</span><h2>Have a topic in mind?</h2><p>Suggest a topic, share feedback or ask about MEDICO.</p></div><a class="light-button" href="mailto:hello@medico.example">Contact MEDICO <span>↗</span></a></div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="#home"><span class="brand-mark">M<span>+</span></span><span class="brand-copy"><strong>MEDICO</strong><small>PHARMACY & HEALTHCARE</small></span></a><p>Clear learning for pharmacy and healthcare.</p><div class="footer-links"><a href="#notes">Pharmacy Notes</a><a href="#diseases">Diseases</a><a href="#tools">Tools</a><a href="#about">About</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> MEDICO. All rights reserved.</span><span>Educational content only · Not a substitute for professional medical advice.</span></div></footer>
+
+<div class="modal-backdrop" id="toolModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="tool-modal"><button class="modal-close" id="modalClose" aria-label="Close">×</button><span class="kicker">MEDICO LEARNING TOOL</span><h2 id="modalTitle">Calculator</h2><div id="modalBody"></div><p class="modal-disclaimer">For educational practice only. Check units and verify results independently. Not for clinical prescribing or treatment decisions.</p></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
